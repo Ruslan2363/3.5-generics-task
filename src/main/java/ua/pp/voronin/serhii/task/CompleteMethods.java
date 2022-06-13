@@ -13,7 +13,7 @@ public class CompleteMethods {
         getUniqueMeasurableItems(List.of(new BottleOfCoke(), new BottleOfCoke(), new BottleOfCoke())); // 4
     }
 
-    public static <T ...> Set<T> getUniqueMeasurableItems(List<T> list) {
+    public static <T /* тут вписати визначення типу T */> Set<T> getUniqueMeasurableItems(List<T> list) {
         // some specific processing to happen here
         return new HashSet<T>(list);
     }
