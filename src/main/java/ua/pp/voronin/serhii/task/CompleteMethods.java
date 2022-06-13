@@ -10,7 +10,7 @@ public class CompleteMethods {
         getUniqueMeasurableItems(List.of(new Apple(), new WaterMelon(), new Tomato())); // 1
         getUniqueMeasurableItems(List.of(new Coin(), new Toy(), new Chair())); // 2
         getUniqueMeasurableItems(List.of(new Water(), new Juice(), new Oil())); // 3
-        getUniqueMeasurableItems(List.of(new BottleOfCoke(), new BottleOfCoke(), new BottleOfCoke())); // 4
+        var packedBeverages = getUniqueMeasurableItems(List.of(new CanOfCoke(), new BottleOfJuice())); // 4
     }
 
     public static <T /* тут вписати визначення типу T */> Set<T> getUniqueMeasurableItems(List<T> list) {
@@ -36,5 +36,6 @@ public class CompleteMethods {
     private static class Juice implements MeasuredInLiters {}
     private static class Oil implements MeasuredInLiters {}
 
-    private static class BottleOfCoke implements Countable, MeasuredInLiters {}
+    private static class CanOfCoke implements Countable, MeasuredInLiters {}
+    private static class BottleOfJuice implements Countable, MeasuredInLiters {}
 }
